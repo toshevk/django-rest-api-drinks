@@ -7,6 +7,10 @@ from rest_framework.response import Response
 from rest_framework import status
 
 
+def index(request):
+    return render(request=request, template_name="index.html")
+
+
 @api_view(['GET', 'POST'])
 def drink_list(request):
     if request.method == 'GET':
